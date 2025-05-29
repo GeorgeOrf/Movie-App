@@ -1,5 +1,6 @@
 import './index.css'
 import './App.css'
+
 import Header from './components/Header.jsx'
 import { fetchMovies } from './services/api.js'
 
