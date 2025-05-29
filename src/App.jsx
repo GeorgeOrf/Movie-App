@@ -5,7 +5,7 @@ import Search from './components/Search.jsx'
 import batmanJPG from './assets/batman.png'
 import infWarJPG from './assets/infWar.webp'
 import moonLightJPG from './assets/moonlight.jpg'
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
 
 const API_BASE_URL= 'https://api.themoviedb.org/3';
 
