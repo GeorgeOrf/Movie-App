@@ -1,0 +1,20 @@
+/* Search Bar styling */
+.searchBar{
+    width: 400px;
+    border: 1px solid black;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 10px;
+}
+.searchBar input{
+    width: 100%;
+    text-align: left;
+    line-height: 40px;
+}
+.searchBar button{
+    cursor: pointer;
+    width: 30px;
+    padding: 6px;    
+}
