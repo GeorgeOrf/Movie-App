@@ -2,6 +2,8 @@ import './index.css'
 import './App.css'
 
 import Header from './components/Header.jsx'
+import Spinner from './components/Spinner.jsx'
+import MovieItem from './components/MovieItem.jsx'
 import { fetchMovies } from './services/api.js'
 
 import { useState, useEffect } from 'react'
@@ -40,16 +42,23 @@ function App() {
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
 
         <section className='allMovies'>
-          <h2>All Movies</h2>
+          <h2 className='text-white text-lg'>All Movies</h2>
 
           {isLoading ? (
-            <p className='text-white'>Loading...</p>
+            <div className='text-white'><Spinner /></div>
           ) : errorMessage ? (
             <p className='text-red-500'>{errorMessage}</p>
           ) : (
-            <ul>
+            <ul className='moviesCont'>
               {movieList.map((movie) => (
-                <p className='text-white'>{movie.title}</p>
+                <li className='movieItem'>
+                <MovieItem 
+                key={movie.id}
+                imageSrc={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} title={movie.title}
+                dateOfRelease={movie.release_date}
+                movieVotes={movie.vote_average}
+                />
+                </li>
               ))}
             </ul>
           )}
@@ -60,3 +69,4 @@ function App() {
 };
 
 export default App
+

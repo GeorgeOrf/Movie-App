@@ -11,7 +11,7 @@ const API_OPTIONS = {
 };
 
 export const fetchMovies = async () => {
-      const endpoint = `${API_BASE_URL}/discover/movie?sort_buy=popularity.desc`;
+      const endpoint = `${API_BASE_URL}/discover/movie?sort_by=popularity.desc`;
 
       const res = await fetch(endpoint, API_OPTIONS)
 

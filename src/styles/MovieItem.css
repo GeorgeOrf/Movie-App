@@ -1,0 +1,19 @@
+.movieTitle {
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.movieExtras {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.movieExtras h5 {
+    padding: 2px;
+    margin-left: 5px;
+    color: white;
+}
+.movieExtras h5:nth-child(2) {
+    color: yellow;
+}
