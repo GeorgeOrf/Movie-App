@@ -2,6 +2,7 @@ import './index.css'
 import './App.css'
 
 import Header from './components/Header.jsx'
+import Footer from './components/Footer.jsx'
 import Spinner from './components/Spinner.jsx'
 import MovieItem from './components/MovieItem.jsx'
 import { fetchMovies } from './services/api.js'
@@ -34,12 +35,13 @@ function App() {
   }, [])
 
   return (
+    <>
+      <div className='wrapper'>
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+      </div>
+
     <main>
       <div className='pattern' />
-
-      <div className='wrapper'>
-
-        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
 
         <section className='allMovies'>
           <h2 className='text-white text-lg'>All Movies</h2>
@@ -63,8 +65,9 @@ function App() {
             </ul>
           )}
         </section>
-      </div>
     </main>
+        <Footer />
+    </>
   );
 };
 

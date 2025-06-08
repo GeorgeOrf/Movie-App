@@ -1,5 +1,6 @@
 import Card from './Card.jsx'
 import Search from './Search.jsx'
+import NavBar from './NavBar.jsx'
 
 import batmanJPG from '../assets/batman.png'
 import infWarJPG from '../assets/infWar.webp'
@@ -8,8 +9,8 @@ import moonLightJPG from '../assets/moonlight.jpg'
 
 const Header = ({ searchTerm , setSearchTerm }) => {
   return(
-    <header>
-          <img src="bruh.png" alt="Website logo" style={styles.logo}/><br />
+    <header style={styles.header}>
+          <NavBar />
       <div style={styles.deck}>
             {cardData.map((card, index) => (
           <div key={index} style={{...styles.cardWrapper, ...cardStyles[index]}}>
@@ -56,18 +57,16 @@ const styles = {
     position: 'relative',
     width: '300px',
     height: '260px',
-    margin: '0px 0px 120px 0px',
+    margin: '120px 0px 120px 0px',
   },
   cardWrapper: {
     position: 'absolute',
     transformOrigin: 'bottom center',
     transition: 'transform 0.3s ease',
   },
-  logo: {
-    width: '90px',
-    margin: 'auto',
-    marginTop: '10px',
-  },
+  header: {
+    width: '100%',
+  }
 };
 
 export default Header
