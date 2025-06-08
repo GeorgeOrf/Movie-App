@@ -1,0 +1,15 @@
+.footerCont{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer{
+    width: 100%;
+    background-color: rgb(202, 220, 236);
+    opacity: 0.6;
+}
+.footerCont h4{
+    font-size: 18px;
+}

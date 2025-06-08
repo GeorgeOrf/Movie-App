@@ -1,0 +1,49 @@
+
+.outerNavCont {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(202, 220, 236);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.outerNavCont img {
+    margin-right: auto;
+}
+.navCont{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.navItem{
+    margin: 45px;
+    color: rgb(22, 61, 105);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.navItem::after{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: rgb(31, 139, 167);
+    bottom: 4%;
+    transition: all 0.3s ease;
+}
+.navItem:hover{
+    cursor: pointer;
+    color: rgb(29, 153, 194);
+}
+.navItem:hover::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: rgb(31, 139, 167);
+    bottom: 4%;
+}
