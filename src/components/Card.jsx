@@ -1,8 +1,10 @@
 
+import '../styles/Card.css'
+
 const Card = ({title, imageUrl}) => {
     return (
             <div style={cardStyle}>
-                <img src={imageUrl} alt={title}  style={imgStyle}/>
+                <img className='deckImg' src={imageUrl} alt={title}  style={imgStyle}/>
             </div>
     );
 };

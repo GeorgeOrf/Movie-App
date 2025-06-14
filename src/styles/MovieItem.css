@@ -1,6 +1,6 @@
 .movieTitle {
     color: white;
-    font-size: 18px;
+    font-size: 13px;
     text-align: center;
     font-weight: bold;
 }
@@ -16,4 +16,16 @@
 }
 .movieExtras h5:nth-child(2) {
     color: yellow;
+}
+.movieExtras img {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+}
+.movieItemCont {
+    margin: 10px;
+    background: rgb(24, 24, 70);
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.13);
 }

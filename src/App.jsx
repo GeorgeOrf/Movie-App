@@ -51,18 +51,17 @@ function App() {
           ) : errorMessage ? (
             <p className='text-red-500'>{errorMessage}</p>
           ) : (
-            <ul className='moviesCont'>
+            <div className='moviesCont'>
               {movieList.map((movie) => (
-                <li className='movieItem'>
+                <div className='movieItem' key={movie.id}>
                 <MovieItem 
-                key={movie.id}
                 imageSrc={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} title={movie.title}
                 dateOfRelease={movie.release_date}
                 movieVotes={movie.vote_average}
                 />
-                </li>
+                </div>
               ))}
-            </ul>
+            </div>
           )}
         </section>
     </main>
