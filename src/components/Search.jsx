@@ -1,17 +1,26 @@
 import '../styles/Search.css'
-import searchIcon from '../assets/search.svg'
+// import searchIcon from '../assets/search.svg'
 
-const Search = ({ searchTerm, setSearchTerm }) => {
+const Search = ({ searchTerm, setSearchTerm}) => {
+
+    const handleInputChange = (e) => {
+        const value = e.target.value;
+        setSearchTerm(value);
+    };
+
+
     return(
+        <>
         <p className='searchBar'>
-          <button onClick={() => searchMovie()}><img src={searchIcon} alt="Search icon" /></button>
+          {/* <button onClick={() => setSearchTerm('')}><img src={searchIcon} alt="Search icon" /></button> */}
           <input 
            type="text"
-           placeholder='Search through 300+ movies online'
+           placeholder=' Search through 300+ movies online'
            value={searchTerm}
-           onChange={(e) => setSearchTerm(e.target.value)}
+           onChange={handleInputChange}
            />
         </p>
+        </>
     )
         
 }

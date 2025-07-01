@@ -7,6 +7,8 @@
     flex-direction: row;
     position: relative;
     margin-top: 10px;
+    z-index: 0;
+    border-radius: 10px;
 }
 .searchBar input{
     width: 100%;
@@ -17,4 +19,9 @@
     cursor: pointer;
     width: 30px;
     padding: 6px;    
+}
+@media(max-width:768px){
+    .searchBar{
+        width: 90%;
+    }
 }
