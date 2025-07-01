@@ -7,18 +7,6 @@
     align-items: center;
     width: 100%;
 }
-.wrapper header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.wrapper h1{
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 100px;
-}
-
 /* Movie list styling */
 .moviesCont {
     width: 100%;
@@ -55,6 +43,7 @@
 }
 .allMovies h2{
     font-size: 24px;
+    color: white;
     margin: 10px auto 10px 50px;
 }
 @media (max-width: 1024px) {
