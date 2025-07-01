@@ -70,10 +70,12 @@ function Home() {
             <div className='moviesCont'>
               {movieList.map((movie) => (
                 <div className='movieItem' key={movie.id}>
-                <MovieItem 
+                <MovieItem
+                id={movie.id}
                 imageSrc={`https://image.tmdb.org/t/p/w300${movie.poster_path}`} title={movie.title}
                 dateOfRelease={movie.release_date}
                 movieVotes={movie.vote_average}
+                oriLang={movie.original_language}
                 />
                 </div>
               ))}

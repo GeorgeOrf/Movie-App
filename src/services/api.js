@@ -1,6 +1,7 @@
 const API_BASE_URL= 'https://api.themoviedb.org/3';
 
 const API_KEY= import.meta.env.VITE_TMDB_API_KEY;
+const API_KEY_PUBLIC = import.meta.env.VITE_TMDB_PUBLIC_API_KEY;
 
 const API_OPTIONS = {
   method: 'GET',
@@ -9,7 +10,6 @@ const API_OPTIONS = {
     Authorization: `Bearer ${API_KEY}`
   }
 };
-
 export const fetchMovies = async (query = '') => {
    console.log('fetchMovies called with query:', JSON.stringify(query));
   let url = '';
@@ -27,6 +27,12 @@ export const fetchMovies = async (query = '') => {
         throw new Error('Failed to fetch movies!');
       }
 
-      const data = await res.json();
+      const data = await res.json(); 
       return data.results;
   }
+
+export async function fetchMovieById(id){
+  const res = await fetch(`${API_BASE_URL}/movie/${id}?api_key=${API_KEY_PUBLIC}`);
+  if (!res.ok) throw new Error('Failed to fetch mobie details.');
+  return res.json();
+}
