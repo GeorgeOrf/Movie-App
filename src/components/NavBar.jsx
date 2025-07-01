@@ -17,10 +17,12 @@ const NavBar = () => {
         <>
             <div className='hamburgerCont'>
                 <img src={brandLogo} alt="Website logo" className='logo'/>
-                <button className='hamburger' onClick={toggleMenu}>
+                <div className='hamburgerWrapper'>
+                <button className='hamburgerBtn' onClick={toggleMenu}>
                     <img src={hamburger} alt="Hamburger menu button" />
                 </button> 
-
+                </div>
+                
                 <nav>
                     <ul className={`menu ${isOpen ? 'open' : ''}`}>
                         <li className='navItem'><a href="#">Home</a></li>

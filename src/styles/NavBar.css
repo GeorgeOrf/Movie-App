@@ -35,15 +35,23 @@
 /* Hamburger menu */
 .hamburgerCont{
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
 }
-.hamburger {
-    background-color: rgb(202, 220, 236);
+.hamburgerBtn {
+    width: 60px;
     border: none;
     cursor: pointer;
-    width: 100%;
 }
 .hamburger img{
     width: 35px;
+}
+.hamburgerWrapper{
+    background-color: rgb(202, 220, 236);
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .menu{
     display: none;
@@ -64,7 +72,7 @@
     width: 45px;
     height: 45px;
     }
-    .hamburger{
+    .hamburgerBtn{
         display: none;
     }
     .menu{
